@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Licença de Uso · AC Studio</title>
+    
+    <style>
+        /* ===========================================
+           ESTILOS DA PÁGINA DE LICENÇA
+           =========================================== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2b1a3a;
+            font-family: 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(120, 60, 180, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(180, 100, 255, 0.1) 0%, transparent 60%);
+        }
+
+        /* 📄 Container da Licença */
+        .license-container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 40px;
+            padding: 3rem 2.5rem;
+            border: 1px solid rgba(178, 129, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ✨ Brilho decorativo */
+        .license-container::before {
+            content: '⚖️';
+            position: absolute;
+            top: -40px;
+            right: -20px;
+            font-size: 10rem;
+            opacity: 0.04;
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 🔒 Ícone e Logo */
+        .header-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .license-icon {
+            font-size: 3.8rem;
+            line-height: 1;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0 0 15px rgba(178, 129, 255, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 📝 Títulos */
+        .license-title {
+            font-family: 'Times New Roman', 'Georgia', serif;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 2.8rem;
+            text-align: center;
+            color: #e7d5ff;
+            margin-bottom: 0.3rem;
+            letter-spacing: 2px;
+            width: 100%;
+        }
+
+        .license-subtitle {
+            text-align: center;
+            color: #b398d0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(178, 129, 255, 0.15);
+            width: 100%;
+        }
+
+        .license-subtitle span {
+            color: #ffd700;
+        }
+
+        /* 📜 Corpo do texto da licença */
+        .license-body {
+            color: #d4c8e6;
+            font-size: 1rem;
+            line-height: 1.9;
+            width: 100%;
+            max-width: 780px;
+        }
+
+        .license-body p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .license-body strong {
+            color: #e7d5ff;
+        }
+
+        .license-body .highlight {
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        .license-body .purple {
+            color: #b281ff;
+            font-weight: 700;
+        }
+
+        /* 📋 Lista de itens */
+        .license-list {
+            background: rgba(178, 129, 255, 0.06);
+            border-left: 4px solid #b281ff;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border-radius: 0 16px 16px 0;
+            list-style: none;
+            width: 100%;
+            max-width: 780px;
+        }
+
+        .license-list li {
+            padding: 0.4rem 0;
+            color: #d4c8e6;
+            font-weight: 700;
+            text-align: justify;
+        }
+
+        .license-list li::before {
+            content: '✖ ';
+            color: #ff6b6b;
+            font-weight: 700;
+        }
+
+        .license-list .allowed::before {
+            content: '✔ ';
+            color: #7fff7f;
+        }
+
+        /* 🏷️ Selo de direitos reservados */
+        .rights-seal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0 1.5rem;
+            padding: 1rem 2rem;
+            background: rgba(178, 129, 255, 0.08);
+            border-radius: 60px;
+            border: 1px solid rgba(178, 129, 255, 0.15);
+            width: 100%;
+            max-width: 650px;
+            flex-wrap: wrap;
+        }
+
+        .rights-seal span {
+            color: #b398d0;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .rights-seal .seal-icon {
+            font-size: 1.8rem;
+        }
+
+        /* 📅 Rodapé da Licença */
+        .license-footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(178, 129, 255, 0.1);
+            color: #b398d0;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        .license-footer strong {
+            color: #e7d5ff;
+        }
+
+        /* 🔙 Botão Voltar */
+        .btn-back {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2.5rem;
+            background: linear-gradient(135deg, #c7abff, #b281ff);
+            border: none;
+            border-radius: 60px;
+            color: #1f142b;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 25px rgba(178, 129, 255, 0.2);
+            text-align: center;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(178, 129, 255, 0.3);
+        }
+
+        .btn-back:active {
+            transform: scale(0.95);
+        }
+
+        /* 📱 Responsividade */
+        @media (max-width: 768px) {
+            .license-container {
+                padding: 2rem 1.5rem;
+            }
+            .license-title {
+                font-size: 2.2rem;
+            }
+            .license-body {
+                font-size: 0.95rem;
+            }
+            .license-list {
+                padding: 1rem 1.2rem;
+            }
+            .rights-seal {
+                flex-direction: column;
+                gap: 0.3rem;
+                padding: 0.8rem 1.5rem;
+            }
+            .header-group {
+                gap: 0.8rem;
+            }
+            .logo-img {
+                height: 48px;
+            }
+            .license-icon {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .license-container {
+                padding: 1.5rem 1rem;
+                border-radius: 28px;
+            }
+            .license-title {
+                font-size: 1.8rem;
+            }
+            .license-subtitle {
+                font-size: 0.95rem;
+            }
+            .license-body {
+                font-size: 0.85rem;
+                line-height: 1.7;
+            }
+            .license-body p {
+                text-align: left;
+            }
+            .license-list {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+            }
+            .license-list li {
+                text-align: left;
+            }
+            .header-group {
+                gap: 0.5rem;
+            }
+            .logo-img {
+                height: 40px;
+            }
+            .license-icon {
+                font-size: 2.5rem;
+            }
+            .btn-back {
+                font-size: 0.9rem;
+                padding: 0.7rem 1.5rem;
+                width: 100%;
+                text-align: center;
+            }
+            .rights-seal span {
+                font-size: 0.75rem;
+            }
+            .rights-seal {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="license-container">
+
+        <!-- 🔒 Ícone + Logo -->
+        <div class="header-group">
+            <span class="license-icon">🔒</span>
+            <img src="1.png" alt="AC Studio · Story Maker - Logo" class="logo-img" id="logoPrincipal" onerror="handleLogoError()" />
+        </div>
+
+        <!-- 📝 Título -->
+        <h1 class="license-title">LICENÇA DE USO</h1>
+        <div class="license-subtitle">
+            <span>©</span> 2026 · AC Studio · Captação · Edição · Storytelling
+        </div>
+
+        <!-- 📜 Texto da Licença -->
+        <div class="license-body">
+
+            <p>
+                <strong>TODOS OS DIREITOS RESERVADOS</strong>
+            </p>
+
+            <p>
+                Este site, seu código-fonte, design, identidade visual, logotipos, textos, imagens, ilustrações, ícones, tipografia e todos os elementos gráficos e funcionais são propriedade exclusiva de 
+                <strong class="purple">AC Studio · Captação · Edição · Storytelling</strong>, protegidos pela 
+                <strong>Lei de Direitos Autorais (Lei 9.610/98)</strong> e demais legislações aplicáveis.
+            </p>
+
+            <!-- 📋 Lista de proibições -->
+            <ul class="license-list">
+                <li><strong>É expressamente proibida</strong> a cópia, reprodução, distribuição, modificação, exibição pública, venda, licenciamento ou qualquer forma de utilização não autorizada, total ou parcial, sem prévia e expressa autorização por escrito da titular dos direitos.</li>
+                <li class="allowed"><strong>É permitida</strong> a visualização e navegação para fins de consulta e conhecimento dos serviços oferecidos.</li>
+                <li><strong>Não é permitido</strong> o uso comercial, redistribuição ou incorporação em outros projetos sem autorização.</li>
+            </ul>
+
+            <p>
+                A violação destes termos sujeitará o infrator às medidas judiciais cabíveis, incluindo indenização por perdas e danos, nos termos da legislação brasileira.
+            </p>
+
+            <p style="margin-top: 1.5rem; text-align: center; font-size: 1.1rem;">
+                <span class="highlight">✦</span> 
+                <strong>AC Studio · Captação · Edição · Storytelling</strong> 
+                <span class="highlight">✦</span>
+            </p>
+
+            <p style="text-align: center; color: #b398d0;">
+                📸 @by.acstudio
+            </p>
+        </div>
+
+        <!-- 🏷️ Selo de Direitos Reservados -->
+        <div class="rights-seal">
+            <span class="seal-icon">⚖️</span>
+            <span>TODOS OS DIREITOS RESERVADOS · LEI 9.610/98</span>
+            <span class="seal-icon">🔒</span>
+        </div>
+
+        <!-- 📅 Rodapé da Licença -->
+        <div class="license-footer">
+            <strong>© 2026 AC Studio · Captação · Edição · Storytelling</strong>
+            <br>
+            <span style="font-size: 0.8rem; color: #8a7aa0;">
+                Esta licença é regida pelas leis da República Federativa do Brasil.
+            </span>
+        </div>
+
+        <!-- 🔙 Botão para voltar -->
+        <a href="index.html" class="btn-back">⬅ Voltar para o site</a>
+
+    </div>
+
+    <script>
+        // Função para tratamento de erro da logo
+        function handleLogoError() {
+            const logo = document.getElementById('logoPrincipal');
+            if (logo) {
+                logo.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
